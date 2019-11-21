@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: @main-bg-color;
+  font-size: 62.5%;
+  max-width: @page-width;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Helvetica;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+p {
+  margin: @std-padding;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+ol {
+  margin: @std-padding;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: @std-padding;
+}
+
+ol > li > ol {
+  list-style-type: disc;
+}
+
+nav {
+  .flexbox(row, flex-start, flex-start);
+  width: 100%;
+  padding: @std-padding;
+  background-color: @color-twitter-dark;
+
+  a {
+    padding-left: @std-padding;
+    padding-right: @std-padding;
+    font-size: 1rem;
+    line-height: 2rem;
+    .link();
+  }
+  .selected-link {
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 1rem;
+  }
+}
+
+header {
+  .flexbox(row, space-between, flex-start);
+  background-color: @color-twitter-dark;
+  color: @color-twitter-light;
+  padding-left: @std-padding;
+  padding-right: @std-padding;
+  padding-bottom: @std-padding;
+
+  svg {
+    fill: @color-twitter-light;
+    width: 200px;
+    height: 200px;
+  }
+
+  .question-mark {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+}
+
+main {
+  background-color: white;
+  padding: @std-padding;
+}
+
+footer {
+  .flexbox(row, center, flex-start);
+  background-color: @color-twitter-dark;
+  color: @color-twitter-light;
+  font-size: 1rem;
+  padding-top: @std-padding;
+  padding-bottom: @std-padding;
+}
+
+.button-container {
+  .flexbox(row, center, flex-start);
+  margin-top: @std-padding;
+
+  button {
+    margin: @std-padding;
+    font-size: 3rem;
+    line-height: 6rem;
+    color: @color-twitter-dark;
+    background-color: @color-alt-light;
+    border: 1px solid @color-alt-dark;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @color-alt-medium;
+    }
+  }  
+}
+
+.about-us-section-container {
+  .flexbox(row, space-around, flex-start);
+  height: 550px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: @std-padding;
+
+  .about-us-section-row {
+    .flexbox(column, flex-start, stretch);
+    border: 2px solid @color-twitter-dark;
+    height: 100%;
+    width: 30%;
+    padding: @std-padding;
+
+    .about-us-name {
+      text-align: center;
+      padding-bottom: @std-padding;
+    }
+
+    .about-us-img {
+      border: 2px solid @color-twitter-dark;
+      height: 200px;
+      text-align: center;
+    }
+
+    .about-us-text {
+      flex-grow: 1;
+      padding-top: @std-padding;
+
+      .dev-word {
+        color: #8860D0;
+      }
+    }
+
+    .about-us-button {
+      text-align: center;
+    }
+  }
+}
+
+.radial-gradient-background {
+  background-image: radial-gradient(@color-twitter-light, @color-twitter-dark);
+}
+
+.linear-gradient-background {
+  background-image: linear-gradient(@color-twitter-light, @color-twitter-dark);
+}
+
+.highlight-text {
+  color: @color-alt-dark;
+}
+
+.flexgrow-full {
+  flex-grow: 1;
+}
+
+.flex-img {
+  .flexbox(row, space-around, flex-start);
+
+  .twitter-user-img {
+    width: 25vw;
+    height: 25vw;
+    max-width: 180px;
+    max-height: 180px;
+    border-radius: 50%;
+    border: 2px solid @color-alt-dark;
+  }
+
+  .twitter-handle {
+    font-size: 1rem;
+    margin-top: @std-padding;
+    width: 25vw;
+    text-align: center;
+  }
+}
+
+.game-example {
+  border: 1px solid @color-twitter-dark;
+  padding-bottom: @std-padding;
+
+  .game-example-tweet {
+    text-align: center;
+  }
+}

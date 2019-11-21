@@ -1,0 +1,26 @@
+.flexbox (@flex-direction, @justify-content, @align-items) {
+  display: flex;
+  flex-direction: @flex-direction;
+  justify-content: @justify-content;
+  align-items: @align-items;
+}
+
+.link () {
+  color: @color-twitter-light;
+  text-decoration: none;
+}
+
+.button (@width, @text-color, @background-color) {
+  width: @width;
+  color: @text-color;
+  background-color: @background-color;
+  border-radius: 5px;
+  font-size: 2.0rem;
+  padding: 10px;
+  text-align: center;
+
+  &:hover {
+    color: @background-color;
+    background-color: @text-color;
+  }
+}
