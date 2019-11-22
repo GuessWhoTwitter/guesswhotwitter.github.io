@@ -195,9 +195,19 @@ header svg {
   width: 200px;
   height: 200px;
 }
+@media (max-width: 500px) {
+  header svg {
+    display: none;
+  }
+}
 header .question-mark {
   font-size: 6rem;
   font-weight: bold;
+}
+@media (max-width: 500px) {
+  header .question-mark {
+    display: none;
+  }
 }
 main {
   background-color: white;
@@ -241,39 +251,51 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  height: 550px;
+  height: 100%;
   font-size: 1rem;
   line-height: 1.5rem;
   padding-bottom: 20px;
+  flex-wrap: wrap;
 }
-.about-us-section-container .about-us-section-row {
+.about-us-section-container .about-us-section-person-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   border: 2px solid #005fd1;
-  height: 100%;
-  width: 30%;
+  height: 500px;
+  width: 275px;
   padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.about-us-section-container .about-us-section-row .about-us-name {
+.about-us-section-container .about-us-section-person-info .about-us-name {
   text-align: center;
   padding-bottom: 20px;
 }
-.about-us-section-container .about-us-section-row .about-us-img {
+.about-us-section-container .about-us-section-person-info .about-us-img {
   border: 2px solid #005fd1;
   height: 200px;
   text-align: center;
 }
-.about-us-section-container .about-us-section-row .about-us-text {
+.about-us-section-container .about-us-section-person-info .about-us-text {
   flex-grow: 1;
   padding-top: 20px;
 }
-.about-us-section-container .about-us-section-row .about-us-text .dev-word {
+.about-us-section-container .about-us-section-person-info .about-us-text .dev-word {
   color: #8860D0;
 }
-.about-us-section-container .about-us-section-row .about-us-button {
+.about-us-section-container .about-us-section-person-info .about-us-button {
   text-align: center;
+}
+.about-us-section-container .about-us-section-person-info .about-us-button .tweet-btn {
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #C1C8E4;
+}
+.about-us-section-container .about-us-section-person-info .about-us-button .tweet-btn:hover {
+  background-color: #5AB9EA;
 }
 .radial-gradient-background {
   background-image: radial-gradient(#71c9f8, #005fd1);
@@ -313,4 +335,14 @@ footer {
 }
 .game-example .game-example-tweet {
   text-align: center;
+}
+@media (max-width: 799px) {
+  .game-example {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .game-example {
+    display: none;
+  }
 }

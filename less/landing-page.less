@@ -67,11 +67,19 @@ header {
     fill: @color-twitter-light;
     width: 200px;
     height: 200px;
+
+    @media @phone {
+      display: none;
+    }
   }
 
   .question-mark {
     font-size: 6rem;
     font-weight: bold;
+
+    @media @phone {
+      display: none;
+    }
   }
 }
 
@@ -113,17 +121,21 @@ footer {
 
 .about-us-section-container {
   .flexbox(row, space-around, flex-start);
-  height: 550px;
+  height: 100%;
   font-size: 1rem;
   line-height: 1.5rem;
   padding-bottom: @std-padding;
+  flex-wrap: wrap;
 
-  .about-us-section-row {
+  .about-us-section-person-info {
     .flexbox(column, flex-start, stretch);
     border: 2px solid @color-twitter-dark;
-    height: 100%;
-    width: 30%;
+    height: 500px;
+    width: 275px;
     padding: @std-padding;
+    margin-bottom: @std-padding;
+    margin-left: @std-padding;
+    margin-right: @std-padding;
 
     .about-us-name {
       text-align: center;
@@ -147,6 +159,16 @@ footer {
 
     .about-us-button {
       text-align: center;
+
+      .tweet-btn {
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: @color-alt-light;
+
+        &:hover {
+          background-color: @color-alt-medium;
+        }
+      }
     }
   }
 }
@@ -193,5 +215,13 @@ footer {
 
   .game-example-tweet {
     text-align: center;
+  }
+
+  @media @tablet {
+    display: none;
+  }
+
+  @media @phone {
+    display: none;
   }
 }
